@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task Listt</title>
+</head>
+<body>
+{{object_list}}
+
+
+<table>
+    <tr>
+        <th>items</th>
+    </tr>
+    {% for task in object_list  %}
+    <tr>
+        <td>{{task.title}} </td>
+
+    </tr>
+    {% empty %} 
+      <h3>items is empty</h3>
+    {% endfor %}
+</table>
+</body>
+</html>
