@@ -4,16 +4,14 @@
     <title>Task Listt</title>
 </head>
 <body>
-{{object_list}}
-
-
 <table>
     <tr>
         <th>items</th>
     </tr>
-    {% for task in object_list  %}
+    {% for task in tasks  %}
     <tr>
         <td>{{task.title}} </td>
+        <td><a href="{% url 'task' task.id %}">View</a> </td>
 
     </tr>
     {% empty %} 
